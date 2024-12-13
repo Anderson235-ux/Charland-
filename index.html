@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Upload Content</h1>
+        <div id="password-section">
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="upload-section" style="display: none;">
+            <input type="file" id="image" accept="image/*">
+            <input type="text" id="description" placeholder="Enter description">
+            <button onclick="uploadContent()">Upload</button>
+        </div>
+        <div id="content">
+            <h2>Uploaded Content</h2>
+            <div id="content-list"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
