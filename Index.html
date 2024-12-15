@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charland Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>Charland Online</h1>
+        </div>
+
+        <div id="home" class="tab-content">
+            <h2>Home</h2>
+            <div id="product-list"></div>
+        </div>
+
+        <div id="search" class="tab-content" style="display: none;">
+            <h2>Search</h2>
+            <input type="text" placeholder="Search for products...">
+        </div>
+
+        <div id="profile" class="tab-content" style="display: none;">
+            <h2>Profile</h2>
+            <div class="dropdown">
+                <button class="dropbtn">⋮</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="promptLogin()">Login as Owner</a>
+                </div>
+            </div>
+            <div id="owner-section" style="display: none;">
+                <h3>Add Product</h3>
+                <input type="file" id="product-image" accept="image/*">
+                <input type="text" id="product-price" placeholder="Enter price">
+                <button onclick="addProduct()">Add Product</button>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="#home" onclick="showTab('home')">Home</a></li>
+                <li><a href="#search" onclick="showTab('search')">Search</a></li>
+                <li><a href="#profile" onclick="showTab('profile')">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
